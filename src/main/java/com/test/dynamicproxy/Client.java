@@ -4,7 +4,8 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 
 /**
- * 客人
+ * jdk动态代理是基于接口的
+ *    如果对象没有实现接口，则需要使用CGLIB.
  */
 public class Client {
   public static void main(String[] args) {
