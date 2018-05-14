@@ -10,6 +10,9 @@ import java.util.Map;
 public class TestLinkedHashMap {
   private static Map<String, Integer> hashMap = new HashMap<>();
   private static Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+  private static Map<String, Integer> lruCache =
+          new LinkedHashMap<>(16, 0.75f, true);
+
 
   static {
     hashMap.put("张三", 20);
@@ -19,11 +22,18 @@ public class TestLinkedHashMap {
     linkedHashMap.put("张三", 20);
     linkedHashMap.put("李四", 25);
     linkedHashMap.put("王五", 25);
+    linkedHashMap.put("张三", 22);
+
+    lruCache.put("张三", 20);
+    lruCache.put("李四", 25);
+    lruCache.put("王五", 25);
+    lruCache.put("张三", 22);
   }
 
   public static void main(String[] args) {
     print(hashMap);
     print(linkedHashMap);
+    print(lruCache);
   }
 
   public static void print(Map<String, Integer> map) {
