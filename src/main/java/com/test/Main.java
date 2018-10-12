@@ -12,6 +12,7 @@ public class Main {
     queue.add(3);
     queue.add(2);
     queue.add(0);
+
     System.out.println(queue);
   }
 }
